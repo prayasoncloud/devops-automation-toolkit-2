@@ -1,288 +1,391 @@
+# Linux Administration & DevOps Automation Suite
 
-1.1 Resource Monitor
+## 1. Linux System Health & Monitoring Suite
 
-Purpose: Monitor overall system health.
+### 1.1 Resource Monitor
 
-Checks:
+**Purpose:** Monitor overall system health.
 
-CPU usage
-Memory usage
-Swap usage
-Load average
-Uptime
-1.2 Disk Usage Monitor
+**Checks:**
 
-Purpose: Detect storage issues before disks fill up.
+* CPU usage
+* Memory usage
+* Swap usage
+* Load average
+* Uptime
 
-Checks:
+---
 
-Partition usage
-Large directories
-Disk growth trends
-Threshold alerts (80%, 90%, 95%)
-1.3 Network Monitor
+### 1.2 Disk Usage Monitor
 
-Purpose: Verify network availability and performance.
+**Purpose:** Detect storage issues before disks fill up.
 
-Checks:
+**Checks:**
 
-Ping latency
-Packet loss
-DNS resolution
-Gateway reachability
-Internet connectivity
-1.4 Process Health Monitor
+* Partition usage
+* Large directories
+* Disk growth trends
+* Threshold alerts (80%, 90%, 95%)
 
-Purpose: Track important processes.
+---
 
-Checks:
+### 1.3 Network Monitor
 
-Process existence
-CPU consumption
-Memory consumption
-Zombie processes
-Process restart recommendations
-1.5 Service Watchdog
+**Purpose:** Verify network availability and performance.
 
-Purpose: Ensure critical services stay running.
+**Checks:**
 
-Checks:
+* Ping latency
+* Packet loss
+* DNS resolution
+* Gateway reachability
+* Internet connectivity
 
-systemd service status
-Service uptime
-Automatic restart on failure
-Restart logging
+---
 
-Examples:
+### 1.4 Process Health Monitor
 
-nginx
-mysql
-docker
-sshd
-1.6 Memory Leak Detector
+**Purpose:** Track important processes.
 
-Purpose: Identify processes consuming increasing memory.
+**Checks:**
 
-Checks:
+* Process existence
+* CPU consumption
+* Memory consumption
+* Zombie processes
+* Process restart recommendations
 
-Memory snapshots
-Historical comparison
-Growth trends
-Leak suspicion alerts
-2. Linux Security Audit & Hardening Toolkit
-2.1 User Audit Tool
+---
 
-Purpose: Review system users.
+### 1.5 Service Watchdog
 
-Checks:
+**Purpose:** Ensure critical services stay running.
 
-Active users
-Disabled users
-Service accounts
-Expired accounts
-Last login activity
-2.2 Group Audit Tool
+**Checks:**
 
-Purpose: Review group memberships.
+* systemd service status
+* Service uptime
+* Automatic restart on failure
+* Restart logging
 
-Checks:
+**Examples:**
 
-Privileged groups
-Unused groups
-Suspicious memberships
-2.3 Sudo Access Auditor
+* nginx
+* mysql
+* docker
+* sshd
 
-Purpose: Verify privileged access.
+---
 
-Checks:
+### 1.6 Memory Leak Detector
 
-sudoers entries
-NOPASSWD rules
-Unauthorized privilege escalation risks
-2.4 Failed Login Analyzer
+**Purpose:** Identify processes consuming increasing memory.
 
-Purpose: Detect brute-force attempts.
+**Checks:**
 
-Checks:
+* Memory snapshots
+* Historical comparison
+* Growth trends
+* Leak suspicion alerts
 
-Failed SSH logins
-Repeated IP addresses
-Login trends
-Attack summaries
-2.5 Open Port Scanner
+---
 
-Purpose: Discover exposed services.
+# 2. Linux Security Audit & Hardening Toolkit
 
-Checks:
+### 2.1 User Audit Tool
 
-Listening ports
-Public-facing services
-Unexpected services
-Service-to-port mapping
-2.6 File Permission Auditor
+**Purpose:** Review system users.
 
-Purpose: Identify permission issues.
+**Checks:**
 
-Checks:
+* Active users
+* Disabled users
+* Service accounts
+* Expired accounts
+* Last login activity
 
-World-writable files
-SUID binaries
-SGID binaries
-Sensitive file permissions
-2.7 Package Compliance Checker
+---
 
-Purpose: Verify package state.
+### 2.2 Group Audit Tool
 
-Checks:
+**Purpose:** Review group memberships.
 
-Missing updates
-Security patches
-Unsupported packages
-Version compliance
-2.8 Security Hardening Validator
+**Checks:**
 
-Purpose: Check hardening status.
+* Privileged groups
+* Unused groups
+* Suspicious memberships
 
-Checks:
+---
 
-SSH configuration
-Password policies
-Firewall status
-Root login restrictions
-Audit logging
-3. Infrastructure Maintenance Manager
-3.1 Log Cleanup Manager
+### 2.3 Sudo Access Auditor
 
-Purpose: Manage log growth.
+**Purpose:** Verify privileged access.
 
-Functions:
+**Checks:**
 
-Archive logs
-Compress logs
-Delete old logs
-Retention policies
-3.2 Docker Cleanup Manager
+* sudoers entries
+* NOPASSWD rules
+* Unauthorized privilege escalation risks
 
-Purpose: Recover storage.
+---
 
-Functions:
+### 2.4 Failed Login Analyzer
 
-Remove dangling images
-Remove unused containers
-Remove unused volumes
-Storage reports
-3.3 Cron Job Auditor
+**Purpose:** Detect brute-force attempts.
 
-Purpose: Validate scheduled tasks.
+**Checks:**
 
-Checks:
+* Failed SSH logins
+* Repeated IP addresses
+* Login trends
+* Attack summaries
 
-Existing cron jobs
-Duplicate jobs
-Broken commands
-Failed schedules
-3.4 Maintenance Report Generator
+---
 
-Purpose: Produce maintenance summaries.
+### 2.5 Open Port Scanner
 
-Includes:
+**Purpose:** Discover exposed services.
 
-Cleanup statistics
-Storage recovered
-Job audit results
-4. Backup & Disaster Recovery Framework
-4.1 Backup Manager
+**Checks:**
 
-Purpose: Create backups.
+* Listening ports
+* Public-facing services
+* Unexpected services
+* Service-to-port mapping
 
-Supports:
+---
 
-File backups
-Directory backups
-Database backups
-Incremental backups
-4.2 Backup Scheduler
+### 2.6 File Permission Auditor
 
-Purpose: Automate backup execution.
+**Purpose:** Identify permission issues.
 
-Features:
+**Checks:**
 
-Daily backups
-Weekly backups
-Monthly backups
-4.3 Backup Integrity Validator
+* World-writable files
+* SUID binaries
+* SGID binaries
+* Sensitive file permissions
 
-Purpose: Verify backup quality.
+---
 
-Checks:
+### 2.7 Package Compliance Checker
 
-File hashes
-Archive integrity
-Corruption detection
-4.4 Restore Validator
+**Purpose:** Verify package state.
 
-Purpose: Test recoverability.
+**Checks:**
 
-Checks:
+* Missing updates
+* Security patches
+* Unsupported packages
+* Version compliance
 
-Restore test environment
-File restoration
-Data verification
-4.5 Retention Manager
+---
 
-Purpose: Control backup lifecycle.
+### 2.8 Security Hardening Validator
 
-Features:
+**Purpose:** Check hardening status.
 
-Keep last N backups
-Archive old backups
-Delete expired backups
-5. Web Server Operations Toolkit
-5.1 SSL Certificate Monitor
+**Checks:**
 
-Purpose: Prevent certificate expiration.
+* SSH configuration
+* Password policies
+* Firewall status
+* Root login restrictions
+* Audit logging
 
-Checks:
+---
 
-Days remaining
-Expired certificates
-Renewal reminders
-5.2 SSL Security Auditor
+# 3. Infrastructure Maintenance Manager
 
-Purpose: Evaluate TLS configuration.
+### 3.1 Log Cleanup Manager
 
-Checks:
+**Purpose:** Manage log growth.
 
-Protocol versions
-Cipher suites
-Weak configurations
-5.3 Nginx Access Log Analyzer
+**Functions:**
 
-Purpose: Analyze traffic.
+* Archive logs
+* Compress logs
+* Delete old logs
+* Retention policies
 
-Reports:
+---
 
-Total requests
-Top IPs
-Top URLs
-Response codes
-5.4 Nginx Error Log Analyzer
+### 3.2 Docker Cleanup Manager
 
-Purpose: Detect web server issues.
+**Purpose:** Recover storage.
 
-Reports:
+**Functions:**
 
-404 errors
-500 errors
-Upstream failures
-Configuration issues
-5.5 Traffic & Security Reporter
+* Remove dangling images
+* Remove unused containers
+* Remove unused volumes
+* Storage reports
 
-Purpose: Generate operational insights.
+---
 
-Reports:
+### 3.3 Cron Job Auditor
 
-Traffic trends
-Bot detection
-Suspicious requests
-Peak usage periods
+**Purpose:** Validate scheduled tasks.
+
+**Checks:**
+
+* Existing cron jobs
+* Duplicate jobs
+* Broken commands
+* Failed schedules
+
+---
+
+### 3.4 Maintenance Report Generator
+
+**Purpose:** Produce maintenance summaries.
+
+**Includes:**
+
+* Cleanup statistics
+* Storage recovered
+* Job audit results
+
+---
+
+# 4. Backup & Disaster Recovery Framework
+
+### 4.1 Backup Manager
+
+**Purpose:** Create backups.
+
+**Supports:**
+
+* File backups
+* Directory backups
+* Database backups
+* Incremental backups
+
+---
+
+### 4.2 Backup Scheduler
+
+**Purpose:** Automate backup execution.
+
+**Features:**
+
+* Daily backups
+* Weekly backups
+* Monthly backups
+
+---
+
+### 4.3 Backup Integrity Validator
+
+**Purpose:** Verify backup quality.
+
+**Checks:**
+
+* File hashes
+* Archive integrity
+* Corruption detection
+
+---
+
+### 4.4 Restore Validator
+
+**Purpose:** Test recoverability.
+
+**Checks:**
+
+* Restore test environment
+* File restoration
+* Data verification
+
+---
+
+### 4.5 Retention Manager
+
+**Purpose:** Control backup lifecycle.
+
+**Features:**
+
+* Keep last N backups
+* Archive old backups
+* Delete expired backups
+
+---
+
+# 5. Web Server Operations Toolkit
+
+### 5.1 SSL Certificate Monitor
+
+**Purpose:** Prevent certificate expiration.
+
+**Checks:**
+
+* Days remaining
+* Expired certificates
+* Renewal reminders
+
+---
+
+### 5.2 SSL Security Auditor
+
+**Purpose:** Evaluate TLS configuration.
+
+**Checks:**
+
+* Protocol versions
+* Cipher suites
+* Weak configurations
+
+---
+
+### 5.3 Nginx Access Log Analyzer
+
+**Purpose:** Analyze traffic.
+
+**Reports:**
+
+* Total requests
+* Top IPs
+* Top URLs
+* Response codes
+
+---
+
+### 5.4 Nginx Error Log Analyzer
+
+**Purpose:** Detect web server issues.
+
+**Reports:**
+
+* 404 errors
+* 500 errors
+* Upstream failures
+* Configuration issues
+
+---
+
+### 5.5 Traffic & Security Reporter
+
+**Purpose:** Generate operational insights.
+
+**Reports:**
+
+* Traffic trends
+* Bot detection
+* Suspicious requests
+* Peak usage periods
+
+---
+
+# Summary
+
+| Category                                 | Modules |
+| ---------------------------------------- | ------- |
+| Linux System Health & Monitoring Suite   | 6       |
+| Linux Security Audit & Hardening Toolkit | 8       |
+| Infrastructure Maintenance Manager       | 4       |
+| Backup & Disaster Recovery Framework     | 5       |
+| Web Server Operations Toolkit            | 5       |
+| **Total Modules**                        | **28**  |
+
+This suite provides practical experience in Linux Administration, DevOps, Site Reliability Engineering (SRE), Infrastructure Monitoring, Security Auditing, Backup Management, and Web Server Operations.
